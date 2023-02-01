@@ -6,7 +6,7 @@
 /*   By: ptungbun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 15:21:41 by ptungbun          #+#    #+#             */
-/*   Updated: 2023/01/29 12:35:25 by ptungbun         ###   ########.fr       */
+/*   Updated: 2023/02/01 12:15:19 by ptungbun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,10 +83,10 @@ int	main(int argc, char **argv)
 	map = fdf_readfile(argv[1]);
 	vp = &map.viewport;
 	vp->mlx_ptr = mlx_init();
-	vp->win_ptr = mlx_new_window(vp->mlx_ptr, WINDOW_WIDTH,
+	vp->win_ptr = mlx_new_window(vp->mlx_ptr, WINDOW_WIDTH, \
 	WINDOW_HEIGHT, "fdf");
 	vp->img.mlx_img = mlx_new_image(vp->mlx_ptr, WINDOW_WIDTH, WINDOW_HEIGHT);
-	vp->img.addr = mlx_get_data_addr(vp->img.mlx_img, &vp->img.bpp,
+	vp->img.addr = mlx_get_data_addr(vp->img.mlx_img, &vp->img.bpp, \
 	&vp->img.line_len, &vp->img.endian);
 	fdf_set_default(&map);
 	map.scr = fdf_plotscr(&map);
